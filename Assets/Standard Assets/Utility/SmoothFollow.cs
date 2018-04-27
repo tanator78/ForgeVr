@@ -5,18 +5,20 @@ namespace UnityStandardAssets.Utility
 	public class SmoothFollow : MonoBehaviour
 	{
 
-		// The target we are following
+		// Un [SerializeField]  suivi d'une variable private ne bloque pas l'accès à la variable dans l'Inspecteur.
+
+		// The target we are following  , il s'agit d'un transform directement, et non d'un gameObject. 
 		[SerializeField]
 		private Transform target;
 		// The distance in the x-z plane to the target
 		[SerializeField]
 		private float distance = 10.0f;
-		// the height we want the camera to be above the target
+		// the height we want the object to be above the target
 		[SerializeField]
 		private float height = 5.0f;
 
 		[SerializeField]
-		private float rotationDamping;
+		private float rotationDamping;		// laisser à zéro. 
 		[SerializeField]
 		private float heightDamping;
 
